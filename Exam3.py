@@ -11,6 +11,7 @@ params={'q': city, 'units': 'metric', 'lang': 'ru', 'APPID': appid})
 data = res.json()
 print("Прогноз погоды на неделю:")
 for i in data["list"]:
-    print ("\t",i['weather'][0]['description'],". Скорость ветра: ",
+    print(i["dt_txt"])
+    print ("\t","Видимость",i['visibility'],"м; Скорость ветра: ",
     i['wind']['speed'],"м/с")
 
